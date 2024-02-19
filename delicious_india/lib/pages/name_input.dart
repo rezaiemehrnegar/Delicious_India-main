@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'main_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:delicious_india/services/name_save.dart';
