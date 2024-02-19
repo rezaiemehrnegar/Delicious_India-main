@@ -158,68 +158,71 @@ class Widgets {
     ];
 
     for (int i = 0; i < name.length; i++) {
-      children.add(Padding(
-        padding:
-            EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
-        child: Center(
-          child: Column(
-            children: [
-              ElevatedButton(
-                onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (context) {
-                      return Dialog(
-                        backgroundColor: const Color(0xFFFAFAFA),
-                        alignment: Alignment.center,
-                        child: SizedBox(
-                          height: 260,
-                          width: 336,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 10, bottom: 10),
-                                child: Text(
-                                  name[i],
-                                  style: const TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
+      children.add(
+        Padding(
+          padding:
+              EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.02),
+          child: Center(
+            child: Column(
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return Dialog(
+                          backgroundColor: const Color(0xFFFAFAFA),
+                          alignment: Alignment.center,
+                          child: SizedBox(
+                            height: 260,
+                            width: 336,
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 10, bottom: 10),
+                                  child: Text(
+                                    name[i],
+                                    style: const TextStyle(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image(
-                                    image: AssetImage(
-                                        "assets/images/${imageName[i]}.png"),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 13),
-                                    child: SizedBox(
-                                      height: 190,
-                                      width: 130,
-                                      child: SingleChildScrollView(
-                                        child: Text(
-                                          description[i],
-                                          maxLines: 10,
-                                          style: const TextStyle(
-                                              fontWeight: FontWeight.w600),
-                                        ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image(
+                                      image: AssetImage(
+                                        "assets/images/${imageName[i]}.png",
                                       ),
                                     ),
-                                  )
-                                ],
-                              ),
-                            ],
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 13),
+                                      child: SizedBox(
+                                        height: 190,
+                                        width: 130,
+                                        child: SingleChildScrollView(
+                                          child: Text(
+                                            description[i],
+                                            maxLines: 10,
+                                            style: const TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                      );
-                    },
-                  );
-                },
-                style: ElevatedButton.styleFrom(
+                        );
+                      },
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
                     fixedSize: const Size(336, 115),
                     backgroundColor: Colors.white,
                     shadowColor: Colors.black,
@@ -227,31 +230,34 @@ class Widgets {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
-                    padding: const EdgeInsets.only(left: 9)),
-                child: Row(
-                  children: [
-                    Image(
-                      image: AssetImage("assets/images/${imageName[i]}.png"),
-                      width: 95,
-                      height: 95,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 17),
-                      child: Text(
-                        name[i],
-                        style: const TextStyle(
+                    padding: const EdgeInsets.only(left: 9),
+                  ),
+                  child: Row(
+                    children: [
+                      Image(
+                        image: AssetImage("assets/images/${imageName[i]}.png"),
+                        width: 95,
+                        height: 95,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 17),
+                        child: Text(
+                          name[i],
+                          style: const TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black),
+                            color: Colors.black,
+                          ),
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              )
-            ],
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
-      ));
+      );
     }
     children.add(
       SizedBox(

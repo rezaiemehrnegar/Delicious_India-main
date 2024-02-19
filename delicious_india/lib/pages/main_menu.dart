@@ -45,12 +45,15 @@ class _MainMenuState extends State<MainMenu> {
                 alignment: Alignment.center,
                 children: <Widget>[
                   const Image(
-                    image: AssetImage('assets/images/location_background.png'),
+                    image: AssetImage(
+                      'assets/images/location_background.png',
+                    ),
                   ),
                   Center(
                     child: Padding(
                       padding: EdgeInsets.all(
-                          MediaQuery.of(context).size.height * 0.03),
+                        MediaQuery.of(context).size.height * 0.03,
+                      ),
                       child: AutoSizeText(
                         "Hello, ${widget.name}",
                         maxLines: 1,
@@ -83,12 +86,17 @@ class _MainMenuState extends State<MainMenu> {
                   child: SearchBar(
                     hintText: "Butter Chicken",
                     hintStyle: MaterialStateProperty.all<TextStyle?>(
-                        const TextStyle(
-                            color: Colors.black54,
-                            fontWeight: FontWeight.bold)),
+                      const TextStyle(
+                        color: Colors.black54,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     controller: controller,
                     padding: const MaterialStatePropertyAll<EdgeInsets>(
-                        EdgeInsets.symmetric(horizontal: 16.0)),
+                      EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                      ),
+                    ),
                     onTap: () {
                       controller.openView();
                     },
@@ -129,7 +137,8 @@ class _MainMenuState extends State<MainMenu> {
                                           children: [
                                             Image(
                                               image: AssetImage(
-                                                  "assets/images/${Widgets().imageMap[controller.text]}.png"),
+                                                "assets/images/${Widgets().imageMap[controller.text]}.png",
+                                              ),
                                             ),
                                             Padding(
                                               padding: const EdgeInsets.only(
@@ -143,8 +152,9 @@ class _MainMenuState extends State<MainMenu> {
                                                         controller.text]!,
                                                     maxLines: 10,
                                                     style: const TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w600),
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -239,12 +249,16 @@ class _MainMenuState extends State<MainMenu> {
                               ),
                             );
                           },
-                          icon: Image.asset('assets/images/foodai_icon.png'),
+                          icon: Image.asset(
+                            'assets/images/foodai_icon.png',
+                          ),
                           padding: const EdgeInsets.only(bottom: 0),
                         ),
                         const Text(
                           "FoodAI",
-                          style: TextStyle(fontWeight: FontWeight.w600),
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                          ),
                         )
                       ],
                     ),

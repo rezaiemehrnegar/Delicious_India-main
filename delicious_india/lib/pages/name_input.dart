@@ -121,10 +121,14 @@ class _NameInputPageState extends State<NameInputPage> {
                           filled: true,
                           fillColor: Colors.white,
                           hintStyle: const TextStyle(
-                              color: Colors.grey, fontWeight: FontWeight.bold),
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
+                          ),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
-                            borderSide: const BorderSide(color: Colors.white),
+                            borderSide: const BorderSide(
+                              color: Colors.white,
+                            ),
                           ),
                           enabledBorder: UnderlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
@@ -169,7 +173,9 @@ class _NameInputPageState extends State<NameInputPage> {
               child: Align(
                 alignment: FractionalOffset.bottomCenter,
                 child: Image(
-                  image: AssetImage('assets/images/group_of_people.png'),
+                  image: AssetImage(
+                    'assets/images/group_of_people.png',
+                  ),
                 ),
               ),
             ),

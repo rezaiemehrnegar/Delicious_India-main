@@ -73,14 +73,22 @@ class _SplashScreenState extends State<SplashScreen>
     return Scaffold(
       body: Container(
         foregroundDecoration: const BoxDecoration(
-            image:
-                DecorationImage(image: AssetImage('assets/images/logo.png'))),
+          image: DecorationImage(
+            image: AssetImage(
+              'assets/images/logo.png',
+            ),
+          ),
+        ),
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [
-            Colors.orange.shade600,
-            Colors.white,
-            Colors.greenAccent.shade400
-          ], begin: Alignment.topRight, end: Alignment.bottomLeft),
+          gradient: LinearGradient(
+            colors: [
+              Colors.orange.shade600,
+              Colors.white,
+              Colors.greenAccent.shade400
+            ],
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+          ),
         ),
       ),
     );
